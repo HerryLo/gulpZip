@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "init": "node ./bin/gulpzip.js"
+    "init": "node ./bin/gz.js"
   },
   "bin": {
-    "gulpzip": "./bin/gulpzip.js"
+    "gz": "./bin/gz.js"
   },
   "repository": {
     "type": "git",

@@ -6,14 +6,14 @@ const util = require('./util');
 
 program
     .version(package.version , '-v, --version')
-    .usage('<command> <file...>')
-    .command('gz', 'create gulp configure')
+    .usage('<command>')
+    .command('gz', 'quick create gulp config')
     .parse(process.argv);
 program
-    .command('gz')
+    .command('gz init')
     .description('quick create gulpfile config')
     .alias('init')
-    .action(function(type, name){
+    .action((type, name) => {
         util.run(type, name);
     });
 program.parse(process.argv);
