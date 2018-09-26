@@ -1,6 +1,6 @@
 {
   "name": "@herry_yopai/gulpzip",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "about gulpfile zip",
   "main": "index.js",
   "scripts": {
