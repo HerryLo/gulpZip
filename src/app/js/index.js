@@ -1,3 +1,1 @@
-function init() {
-    
-}
+let a = 0;
