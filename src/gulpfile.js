@@ -7,7 +7,6 @@ const htmlmin = require('gulp-htmlmin'); //压缩html
 const rename = require('gulp-rename');
 
 const babel = require("gulp-babel"); //babel编译
-const plumber = require('gulp-plumber'); //错误管理 提示
 const strip = require('gulp-strip-comments'); //删除注释
 const sourcemaps = require('gulp-sourcemaps');
 const temUrl = 'app';
