@@ -20,3 +20,5 @@ $ npm install
 
 $ gulp
 ```
+
+<!-- The dist directory is a preview file.-->
