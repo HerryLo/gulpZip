@@ -1,7 +1,7 @@
 {
   "name": "@herry_yopai/gulpzip",
   "version": "0.1.1",
-  "description": "about gulpfile zip",
+  "description": "File operation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
