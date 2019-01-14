@@ -2,17 +2,26 @@ const fs = require('fs');
 const fse = require('fs-extra');
 const chalk = require('chalk')
 const path = require('path');
-const temp = path.join(__dirname, '../src');
 
 module.exports = {
-    run(type, name){
+    file(file, pro){
         try{
-            fse.copy(temp, './')
-            .then(() => {
-                console.log(chalk.gray('create gulp config success!'))
-            })
-            .catch(err => {
-                console.error(err)
+            const fil_path = path.join(__dirname, file);
+            fs.stat(fil_path, (err, stats)=> {
+                if(err){
+                    console.log(chalk.red(err)+'\n');
+                    console.log(chalk.blue('Please enter a valid file or directory!'));
+                    return false;
+                }
+                const fileInfo = {
+                    fileName: file,
+                    dirName: fil_path,
+                    byte: stats.size,
+                    fileSize: stats.blksize/(1024*1024)+'kb',
+                    createTime: new Date(stats.birthtime).toLocaleString(),
+                    changeTime: new Date(stats.ctime).toLocaleString()
+                }
+                console.log(fileInfo);
             })
         }catch(e){
             console.log(e);
